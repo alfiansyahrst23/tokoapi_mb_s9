@@ -1,0 +1,28 @@
+^D:\ALFIANSYAH ARESTA\UNIVERSITAS MERCU BUANA\MATA KULIAH\SEMESTER 4\MOBILE PROGRAMMING\TUGAS\FLUTTER\TOKO_UMB\BUILD\WINDOWS\CMAKEFILES\F83AF78F8366904C44ADAC034D4103E5\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\User\Downloads\flutter "PROJECT_DIR=D:\Alfiansyah Aresta\Universitas Mercu Buana\Mata Kuliah\Semester 4\Mobile Programming\Tugas\Flutter\toko_umb" FLUTTER_ROOT=C:\Users\User\Downloads\flutter "FLUTTER_EPHEMERAL_DIR=D:\Alfiansyah Aresta\Universitas Mercu Buana\Mata Kuliah\Semester 4\Mobile Programming\Tugas\Flutter\toko_umb\windows\flutter\ephemeral" "PROJECT_DIR=D:\Alfiansyah Aresta\Universitas Mercu Buana\Mata Kuliah\Semester 4\Mobile Programming\Tugas\Flutter\toko_umb" "FLUTTER_TARGET=D:\Alfiansyah Aresta\Universitas Mercu Buana\Mata Kuliah\Semester 4\Mobile Programming\Tugas\Flutter\toko_umb\lib\main.dart" DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false "PACKAGE_CONFIG=D:\Alfiansyah Aresta\Universitas Mercu Buana\Mata Kuliah\Semester 4\Mobile Programming\Tugas\Flutter\toko_umb\.dart_tool\package_config.json" C:/Users/User/Downloads/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\ALFIANSYAH ARESTA\UNIVERSITAS MERCU BUANA\MATA KULIAH\SEMESTER 4\MOBILE PROGRAMMING\TUGAS\FLUTTER\TOKO_UMB\BUILD\WINDOWS\CMAKEFILES\0BDBCBFB8ABC8FBD0FE7AD11708E8705\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\ALFIANSYAH ARESTA\UNIVERSITAS MERCU BUANA\MATA KULIAH\SEMESTER 4\MOBILE PROGRAMMING\TUGAS\FLUTTER\TOKO_UMB\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/windows" "-BD:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows" --check-stamp-file "D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/flutter/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

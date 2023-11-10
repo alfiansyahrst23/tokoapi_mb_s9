@@ -1,0 +1,9 @@
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/icudtl.dat
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/flutter_windows.dll
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

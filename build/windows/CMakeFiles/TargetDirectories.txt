@@ -1,0 +1,10 @@
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/CMakeFiles/INSTALL.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/CMakeFiles/ALL_BUILD.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/CMakeFiles/ZERO_CHECK.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/flutter/CMakeFiles/flutter_wrapper_app.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/flutter/CMakeFiles/flutter_assemble.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/flutter/CMakeFiles/INSTALL.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/CMakeFiles/toko_umb.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/CMakeFiles/INSTALL.dir
+D:/Alfiansyah Aresta/Universitas Mercu Buana/Mata Kuliah/Semester 4/Mobile Programming/Tugas/Flutter/toko_umb/build/windows/runner/CMakeFiles/ALL_BUILD.dir
