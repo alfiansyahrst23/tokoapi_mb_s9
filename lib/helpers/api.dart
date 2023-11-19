@@ -6,8 +6,11 @@ import 'app_exception.dart';
 class Api {
   Future<dynamic> post(dynamic url, dynamic data) async {
     var token = await UserInfo().getToken();
+    
+    // ignore: prefer_typing_uninitialized_variables
     var responseJson;
     try {
+      //final response = await http.post(Uri.parse(url),
       final response = await http.post(Uri.parse(url),
           body: data,
           headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
@@ -20,6 +23,7 @@ class Api {
 
   Future<dynamic> get(dynamic url) async {
     var token = await UserInfo().getToken();
+    // ignore: prefer_typing_uninitialized_variables
     var responseJson;
     try {
       final response = await http.get(url,
@@ -33,6 +37,7 @@ class Api {
 
   Future<dynamic> delete(dynamic url) async {
     var token = await UserInfo().getToken();
+    // ignore: prefer_typing_uninitialized_variables
     var responseJson;
     try {
       final response = await http.delete(url,

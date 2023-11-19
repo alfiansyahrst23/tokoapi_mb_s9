@@ -11,6 +11,7 @@ class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyAppState createState() => _MyAppState();
 }
 
@@ -43,6 +44,12 @@ class _MyAppState extends State<MyApp> {
       title: 'Toko UMB',
       debugShowCheckedModeBanner: false,
       home: page,
+      /* routes: {
+        "/": (BuildContext context) => const LoginView(),
+        "/login": (BuildContext context) => const LoginView(),
+        "/register": (BuildContext context) =>const RegistrasiView(),        
+        "/home": (BuildContext context) => ProdukView(),
+      }, */
     );
   }
 }

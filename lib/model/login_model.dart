@@ -2,7 +2,8 @@ class LoginModel {
   int? code;
   bool? status;
   String? token;
-  int? userID;
+  //int? userID;
+  String? userID;
   String? userEmail;
 
   LoginModel({this.code, this.status, this.token, this.userID, this.userEmail});
@@ -13,6 +14,6 @@ class LoginModel {
         status: obj['status'],
         token: obj['data']['token'],
         userID: obj['data']['user']['id'],
-        userEmail: obj['data']);
+        userEmail: obj['data']['user']['email']);
   }
 }
