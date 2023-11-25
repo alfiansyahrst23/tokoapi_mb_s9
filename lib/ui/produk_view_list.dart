@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:toko_umb/bloc/login_bloc.dart';
+import 'package:toko_umb/bloc/logout_bloc.dart';
+import 'package:toko_umb/bloc/produk_bloc.dart';
 import 'package:toko_umb/model/produk_model.dart';
+import 'package:toko_umb/ui/login_view.dart';
 import 'package:toko_umb/ui/produk_detail_view.dart';
 import 'package:toko_umb/ui/produk_view.dart';
 
 
+//produk_page.dart
 class ProdukViewList extends StatefulWidget {
   const ProdukViewList({Key? key}) : super(key: key);
 
@@ -16,53 +21,68 @@ class _ProdukViewListState extends State<ProdukViewList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('List Produk'),
-          actions: [
-            Padding(
-                padding: const EdgeInsets.only(right: 20.0),
-                child: GestureDetector(
-                  child: const Icon(Icons.add, size: 26.0),
-                  onTap: () async {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ProdukView()));
-                  },
-                ))
-          ],
-        ),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              ListTile(
-                title: const Text('Logout'),
-                trailing: const Icon(Icons.logout),
-                onTap: () async {},
-              )
-            ],
-          ),
-        ),
-        body: ListView(
+      appBar: AppBar(
+        title: const Text('List Produk'),
+        actions: [
+          Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                child: const Icon(Icons.add, size: 26.0),
+                onTap: () async {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProdukView()));
+                },
+              ))
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
           children: [
-            ItemProduk(
-                produk: ProdukModel(
-                    id: 1,
-                    kodeproduk: 'A001',
-                    namaproduk: 'Kamera',
-                    hargaproduk: 5000000)),
-            ItemProduk(
-                produk: ProdukModel(
-                    id: 2,
-                    kodeproduk: 'A002',
-                    namaproduk: 'Kulkas',
-                    hargaproduk: 2500000)),
-            ItemProduk(
-                produk: ProdukModel(
-                    id: 3,
-                    kodeproduk: 'A003',
-                    namaproduk: 'Mesin Cuci',
-                    hargaproduk: 2000000)),
+            ListTile(
+              title: const Text('Logout'),
+              trailing: const Icon(Icons.logout),
+              onTap: () async {
+                await LogoutBloc.logout().then((value) => {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) =>const LoginView()))
+                    });
+              },
+            )
           ],
-        ));
+        ),
+      ),
+      body: FutureBuilder<List>(
+        future: ProdukBloc.getProduks(),
+        builder: (context, snapshot) {
+          // ignore: avoid_print
+          if (snapshot.hasError) print(snapshot.error);
+          return snapshot.hasData
+              ? ListProduk(
+                  list: snapshot.data,
+                )
+              : const Center(
+                  child: CircularProgressIndicator(),
+                );
+        },
+      ),
+    );
+  }
+}
+
+class ListProduk extends StatelessWidget {
+  final List? list;
+
+  const ListProduk({Key? key, this.list}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        itemCount: list == null ? 0 : list!.length,
+        itemBuilder: (context, i) {
+          return ItemProduk(
+            produk: list![i],
+          );
+        });
   }
 }
 

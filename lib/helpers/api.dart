@@ -26,7 +26,7 @@ class Api {
     // ignore: prefer_typing_uninitialized_variables
     var responseJson;
     try {
-      final response = await http.get(url,
+      final response = await http.get(Uri.parse(url),
           headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
       responseJson = _returnResponse(response);
     } on SocketException {

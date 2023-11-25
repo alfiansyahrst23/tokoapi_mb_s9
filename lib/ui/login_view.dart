@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toko_umb/bloc/login_bloc.dart';
 import 'package:toko_umb/helpers/user_info.dart';
 import 'package:toko_umb/ui/produk_view.dart';
+import 'package:toko_umb/ui/produk_view_list.dart';
 import 'package:toko_umb/ui/registrasi_view.dart';
 import 'package:toko_umb/widget/warning_dialog.dart';
 
@@ -107,7 +108,7 @@ class _LoginViewState extends State<LoginView> {
       await UserInfo().setUserID(int.parse(value.userID.toString()));
       // ignore: use_build_context_synchronously
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => ProdukView()));
+          MaterialPageRoute(builder: (context) => ProdukViewList()));
     }, onError: (error) {
       // ignore: avoid_print
       print(error);

@@ -23,6 +23,7 @@ class _ProdukDetailViewState extends State<ProdukDetailView> {
       body: Center(
         child: Column(
           children: [
+            Image.network('https://miro.medium.com/v2/resize:fit:640/format:webp/0*ObJbOfJnx4QIPUq9.png'),
             Text(
               "Kode : ${widget.produk!.kodeproduk}",
               style: const TextStyle(fontSize: 20.0),

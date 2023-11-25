@@ -1,3 +1,4 @@
-2023/11/17-18:19:01.215 255c Reusing MANIFEST C:\Users\User\AppData\Local\Temp\flutter_tools.9c77275a\flutter_tools_chrome_device.b597f3d2\Default\Site Characteristics Database/MANIFEST-000001
-2023/11/17-18:19:01.217 255c Recovering log #3
-2023/11/17-18:19:01.217 255c Reusing old log C:\Users\User\AppData\Local\Temp\flutter_tools.9c77275a\flutter_tools_chrome_device.b597f3d2\Default\Site Characteristics Database/000003.log 
+2023/11/25-11:24:59.832 4edc Reusing MANIFEST C:\Users\User\AppData\Local\Temp\flutter_tools.2968391a\flutter_tools_chrome_device.a9e20bdd\Default\Site Characteristics Database/MANIFEST-000001
+2023/11/25-11:24:59.833 4edc Recovering log #3
+2023/11/25-11:24:59.833 4edc (ignoring error) C:\Users\User\AppData\Local\Temp\flutter_tools.2968391a\flutter_tools_chrome_device.a9e20bdd\Default\Site Characteristics Database/000003.log: dropping 163 bytes; Corruption: checksum mismatch
+2023/11/25-11:24:59.835 4edc Reusing old log C:\Users\User\AppData\Local\Temp\flutter_tools.2968391a\flutter_tools_chrome_device.a9e20bdd\Default\Site Characteristics Database/000003.log 
