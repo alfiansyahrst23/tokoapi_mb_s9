@@ -12,9 +12,9 @@ class ProdukModel {
 
   factory ProdukModel.fromJson(Map<String, dynamic> obj) {
     return ProdukModel(
-        id: int.parse(obj['id']),
+        id: int.tryParse(obj['id']),
         kodeproduk: obj['kodeproduk'],
         namaproduk: obj['namaproduk'],
-        hargaproduk: int.parse(obj['hargaproduk']));
+        hargaproduk: int.tryParse(obj['hargaproduk']));
   }
 }

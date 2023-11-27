@@ -3,6 +3,7 @@ import 'package:toko_umb/model/produk_model.dart';
 import 'package:toko_umb/ui/produk_view.dart';
 
 // ignore: must_be_immutable
+// ignore: must_be_immutable
 class ProdukDetailView extends StatefulWidget {
   ProdukModel? produk;
 
@@ -23,7 +24,8 @@ class _ProdukDetailViewState extends State<ProdukDetailView> {
       body: Center(
         child: Column(
           children: [
-            Image.network('https://miro.medium.com/v2/resize:fit:640/format:webp/0*ObJbOfJnx4QIPUq9.png'),
+            Image.network(
+                'https://miro.medium.com/v2/resize:fit:640/format:webp/0*ObJbOfJnx4QIPUq9.png'),
             Text(
               "Kode : ${widget.produk!.kodeproduk}",
               style: const TextStyle(fontSize: 20.0),
@@ -72,7 +74,14 @@ class _ProdukDetailViewState extends State<ProdukDetailView> {
         //tombol hapus
         OutlinedButton(
           child: const Text("Ya"),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ProdukView(
+                          produk: widget.produk!,
+                        )));
+          },
         ),
         //tombol batal
         OutlinedButton(

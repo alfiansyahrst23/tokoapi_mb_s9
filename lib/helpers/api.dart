@@ -40,7 +40,7 @@ class Api {
     // ignore: prefer_typing_uninitialized_variables
     var responseJson;
     try {
-      final response = await http.delete(url,
+      final response = await http.delete(Uri.parse(url),
           headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
       responseJson = _returnResponse(response);
     } on SocketException {
