@@ -4,7 +4,25 @@ import 'package:toko_umb/helpers/user_info.dart';
 import 'app_exception.dart';
 
 class Api {
-  Future<dynamic> post(dynamic url, dynamic data) async {
+
+//   Future<dynamic> post(dynamic url, dynamic data) async {
+//     var token = await UserInfo().getToken();
+    
+//     // ignore: prefer_typing_uninitialized_variables
+//     var responseJson;
+//     try {
+//       //final response = await http.post(Uri.parse(url),
+//       final response = await http.post(Uri.parse(url),
+//           body: data,
+//           headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
+//       responseJson = _returnResponse(response);
+//     } on SocketException {
+//       throw FetchDataException('No Internet connection');
+//     }
+//     return responseJson;
+//   }
+
+Future<dynamic> post(dynamic url, dynamic data) async {
     var token = await UserInfo().getToken();
     
     // ignore: prefer_typing_uninitialized_variables

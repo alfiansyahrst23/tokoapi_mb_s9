@@ -7,7 +7,6 @@ import 'package:toko_umb/ui/login_view.dart';
 import 'package:toko_umb/ui/produk_detail_view.dart';
 import 'package:toko_umb/ui/produk_view.dart';
 
-
 //produk_page.dart
 class ProdukViewList extends StatefulWidget {
   const ProdukViewList({Key? key}) : super(key: key);
@@ -35,22 +34,62 @@ class _ProdukViewListState extends State<ProdukViewList> {
               ))
         ],
       ),
+      // drawer: Drawer(
+      //   child: ListView(
+      //     children: [
+      //       ListTile(
+      //         title: const Text('Logout'),
+      //         trailing: const Icon(Icons.logout),
+      //         onTap: () async {
+      //           await LogoutBloc.logout().then((value) => {
+      //                 Navigator.pushReplacement(context,
+      //                     MaterialPageRoute(builder: (context) =>const LoginView()))
+      //               });
+      //         },
+      //       )
+      //     ],
+      //   ),
+      // ),
+
       drawer: Drawer(
         child: ListView(
           children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  image: DecorationImage(
+                      image: AssetImage("images/umb.png"),
+                      fit: BoxFit.scaleDown)),
+              child: Text(''),
+            ),
             ListTile(
+              leading: const Icon(
+                Icons.add,
+              ),
+              title: const Text('Input Produk'),
+              onTap: () async {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => ProdukView()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.logout,
+              ),
               title: const Text('Logout'),
-              trailing: const Icon(Icons.logout),
               onTap: () async {
                 await LogoutBloc.logout().then((value) => {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) =>const LoginView()))
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginView()))
                     });
               },
             )
           ],
         ),
       ),
+
       body: FutureBuilder<List>(
         future: ProdukBloc.getProduks(),
         builder: (context, snapshot) {
@@ -105,6 +144,10 @@ class ItemProduk extends StatelessWidget {
       child: Card(
         child: ListTile(
           title: Text(produk.namaproduk!),
+          leading: Image.network(
+              'https://miro.medium.com/v2/resize:fit:640/format:webp/0*ObJbOfJnx4QIPUq9.png',
+              height: 50,
+              fit: BoxFit.fill),
           subtitle: Text(produk.hargaproduk.toString()),
         ),
       ),

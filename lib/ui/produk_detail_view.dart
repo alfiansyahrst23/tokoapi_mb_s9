@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:toko_umb/bloc/produk_bloc.dart';
 import 'package:toko_umb/model/produk_model.dart';
 import 'package:toko_umb/ui/produk_view.dart';
+import 'package:toko_umb/ui/produk_view_list.dart';
+import 'package:toko_umb/widget/warning_dialog.dart';
 
 // ignore: must_be_immutable
 // ignore: must_be_immutable
@@ -67,22 +71,55 @@ class _ProdukDetailViewState extends State<ProdukDetailView> {
     );
   }
 
-  void confirmHapus() {
+//   void confirmHapus() {
+//     AlertDialog alertDialog = AlertDialog(
+//       content: const Text("Yakin ingin menghapus data ini?"),
+//       actions: [
+//         //tombol hapus
+//         OutlinedButton(
+//           child: const Text("Ya"),
+//           onPressed: () {
+//             Navigator.push(
+//                 context,
+//                 MaterialPageRoute(
+//                     builder: (context) => ProdukView(
+//                           produk: widget.produk!,
+//                         )));
+//           },
+//         ),
+//         //tombol batal
+//         OutlinedButton(
+//           child: const Text("Batal"),
+//           onPressed: () => Navigator.pop(context),
+//         )
+//       ],
+//     );
+
+//     showDialog(builder: (context) => alertDialog, context: context);
+//   }
+// }
+
+void confirmHapus() {
     AlertDialog alertDialog = AlertDialog(
       content: const Text("Yakin ingin menghapus data ini?"),
       actions: [
         //tombol hapus
         OutlinedButton(
-          child: const Text("Ya"),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ProdukView(
-                          produk: widget.produk!,
-                        )));
-          },
-        ),
+            child: const Text("Ya"),
+            onPressed: () {
+              //var validate = _formKey.currentState!.validate();
+             // if (validate) {
+                //if (!_isLoading) {
+                  if (widget.produk != null) {
+                    //kondisi update produk
+                    delete();
+                  } else {
+                    //kondisi tambah produk
+                    //simpan();
+                  }
+                //}
+              //}
+            }),
         //tombol batal
         OutlinedButton(
           child: const Text("Batal"),
@@ -92,5 +129,29 @@ class _ProdukDetailViewState extends State<ProdukDetailView> {
     );
 
     showDialog(builder: (context) => alertDialog, context: context);
+  }
+
+delete() {
+    setState(() {
+      //_isLoading = true;
+    });
+    //ProdukModel updateProduk = ProdukModel(id: null);
+    //updateProduk.id = widget.produk!.id;
+    //updateProduk.kodeproduk = widget.produk!.kodeproduk;
+    //updateProduk.namaproduk = widget.produk!.namaproduk;
+    //updateProduk.hargaproduk = widget.produk!.hargaproduk;
+    ProdukBloc.deleteProduk(widget.produk!.id).then((value) {
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (BuildContext context) => const ProdukViewList()));
+    }, onError: (error) {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) => const WarningDialog(
+                description: "Proses delete data gagal, silahkan coba lagi",
+              ));
+    });
+    setState(() {
+      //_isLoading = false;
+    });
   }
 }

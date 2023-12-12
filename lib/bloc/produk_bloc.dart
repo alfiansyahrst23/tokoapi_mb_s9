@@ -30,26 +30,48 @@ class ProdukBloc {
     return jsonObj['status'];
   }
 
-  static Future<bool> updateProduk({required ProdukModel produk}) async {
-    String apiUrl = ApiUrl.updateProduk(produk.id!);
+  // static Future<bool> updateProduk({required ProdukModel produk}) async {
+  //   String apiUrl = ApiUrl.updateProduk(produk.id!);
 
+  //   var body = {
+  //     "kodeproduk": produk.kodeproduk,
+  //     "namaproduk": produk.namaproduk,
+  //     "hargaproduk": produk.hargaproduk.toString()
+  //   };
+  //   // ignore: avoid_print
+  //   print("Body : $body");
+  //   var response = await Api().post(apiUrl, body);
+  //   var jsonObj = json.decode(response.body);
+  //   return jsonObj['data'];
+  // }
+
+static Future<bool> updateProduk({required ProdukModel produk}) async {
+    String apiUrl = ApiUrl.updateProduk(produk.id!);
+    
     var body = {
       "kodeproduk": produk.kodeproduk,
       "namaproduk": produk.namaproduk,
-      "hargaproduk": produk.hargaproduk.toString()
+      "hargaproduk": produk.hargaproduk.toString(),
     };
-    // ignore: avoid_print
-    print("Body : $body");
-    var response = await Api().post(apiUrl, body);
-    var jsonObj = json.decode(response.body);
-    return jsonObj['data'];
+    await Api().post(apiUrl, body);
+    return true;
   }
 
-  static Future<bool> deleteProduk({int? id}) async {
-    String apiUrl = ApiUrl.deleteProduk(id!);
+//   static Future<bool> deleteProduk({int? id}) async {
+//     String apiUrl = ApiUrl.deleteProduk(id!);
 
+//     var response = await Api().delete(apiUrl);
+//     var jsonObj = json.decode(response.body);
+//     return (jsonObj as Map<String, dynamic>)['data'];
+//   }
+// }
+
+static Future<bool> deleteProduk(int? id) async {
+    String apiUrl = ApiUrl.deleteProduk(id!);
+    print("jsonObj : $apiUrl");
     var response = await Api().delete(apiUrl);
     var jsonObj = json.decode(response.body);
-    return (jsonObj as Map<String, dynamic>)['data'];
+    print("jsonObj : $jsonObj");
+    return true;
   }
 }
